@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "D:\\dhx\\sourceCode\\TVSample-master\\recycleview\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\top_up_data.png",
+        "source": "D:\\dhx\\sourceCode\\TVSample-master\\recycleview\\src\\main\\res\\drawable-xxhdpi\\top_up_data.png"
+    },
+    {
+        "merged": "D:\\dhx\\sourceCode\\TVSample-master\\recycleview\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\icon_back.png",
+        "source": "D:\\dhx\\sourceCode\\TVSample-master\\recycleview\\src\\main\\res\\drawable-xxhdpi\\icon_back.png"
+    },
+    {
+        "merged": "D:\\dhx\\sourceCode\\TVSample-master\\recycleview\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\record.png",
+        "source": "D:\\dhx\\sourceCode\\TVSample-master\\recycleview\\src\\main\\res\\drawable-xxhdpi\\record.png"
+    }
+]

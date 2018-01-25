@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="animationType">
+        <enum name="DEFAULT" value="0"/>
+        <enum name="TRANSLATE" value="1"/>
+    </attr>
+    <attr format="reference" name="borderDrawable"/>
+    <attr format="dimension" name="borderSize"/>
+    <attr format="integer" name="delay"/>
+    <attr format="integer" name="durationLarge"/>
+    <attr format="integer" name="durationSmall"/>
+    <attr format="integer" name="scale"/>
+    <attr format="boolean" name="scaleable"/>
+    <declare-styleable name="CornerVew">
+        <attr format="string" name="cv_text"/>
+        <attr format="color" name="cv_text_color"/>
+        <attr format="dimension" name="cv_text_size"/>
+        <attr format="boolean" name="cv_text_bold"/>
+        <attr format="boolean" name="cv_text_all_caps"/>
+        <attr format="color" name="cv_background_color"/>
+        <attr format="dimension" name="cv_min_size"/>
+        <attr format="dimension" name="cv_padding"/>
+        <attr format="enum" name="cv_gravity">
+            <enum name="TOP_LEFT" value="51"/>
+            <enum name="TOP_RIGHT" value="53"/>
+            <enum name="BOTTOM_LEFT" value="83"/>
+            <enum name="BOTTOM_RIGHT" value="85"/>
+        </attr>
+        <attr format="boolean" name="cv_fill_triangle"/>
+    </declare-styleable>
+    <declare-styleable name="MetroItemRound">
+        <attr format="dimension" name="bottomRightRadius"/>
+        <attr format="dimension" name="bottomLeftRadius"/>
+        <attr format="dimension" name="radius"/>
+        <attr format="dimension" name="topRightRadius"/>
+        <attr format="dimension" name="topLeftRadius"/>
+
+    </declare-styleable>
+    <declare-styleable name="SmoothHorizontalScrollView">
+        <attr format="integer" name="fadingEdge"/>
+
+    </declare-styleable>
+    <declare-styleable name="TvLinearLayout">
+        <attr name="scaleable"/>
+        <attr name="borderDrawable"/>
+        <attr name="borderSize"/>
+        <attr name="scale"/>
+        <attr name="delay"/>
+        <attr name="durationLarge"/>
+        <attr name="durationSmall"/>
+        <attr name="animationType"/>
+    </declare-styleable>
+    <declare-styleable name="TvRelativeLayout">
+        <attr name="scaleable"/>
+        <attr name="borderDrawable"/>
+        <attr name="borderSize"/>
+
+    </declare-styleable>
+    <declare-styleable name="TvTextView">
+        <attr name="scaleable"/>
+        <attr name="borderDrawable"/>
+        <attr format="integer" name="number"/>
+        <attr format="color" name="numberColor"/>
+
+    </declare-styleable>
+    <declare-styleable name="reflectItemView">
+        <attr format="boolean" name="isReflect"/>
+    </declare-styleable>
+    <dimen name="activity_horizontal_margin">64dp</dimen>
+</resources>

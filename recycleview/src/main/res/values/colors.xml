@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="lightskyblue">#87CEFA</color>
+    <color name="greenyellow">#ADFF2F</color>
+
+    <color name="color_them">#ff32AAFA</color>
+
+    <color name="color_white">#FFFFFFFF</color>
+
+    <color name="color_txt_white">#FFFFFFFF</color>
+
+    <color name="txt_color_black">#222222</color>
+
+    <color name="transparent">#0000</color>
+
+    <color name="line_color">#CDCED2</color>
+
+    <color name="color_page_bg">#EFEFF4</color>
+
+    <color name="color_txt_hint">#999999</color>
+
+    <color name="color_txt_333">#333333</color>
+    <color name="color_txt_444">#444444</color>
+    <color name="color_txt_999">#999999</color>
+    <color name="color_txt_888">#888888</color>
+    <color name="color_txt_666">#666666</color>
+    <color name="color_hint_et">#C2C2C8</color>
+    <color name="color_grey_a2">#A2A2A2</color>
+    <color name="color_red_normal">#FA5D5D</color>
+    <color name="color_green_normal">#66C266</color>
+    <color name="color_yellow_normal">#FFA12A</color>
+
+    <drawable name="img_bg_nomal">#00000000</drawable>
+    <drawable name="img_bg_press">#88d2d2d2</drawable>
+    <color name="str_color_gray_h">#111111</color>
+    <color name="color_txt_blue">#0076FF</color>
+    <color name="color_stay_bg">#E4E5EA</color>
+    <color name="color_select_txt_blue">#3D95F0</color>
+    <color name="color_txt_blue_light">#158CFB</color>
+    <color name="color_txt_yellow_light">#FFFCDD</color>
+    <color name="color_txt_yellow_dark">#FFA810</color>
+    <color name="color_f8">#f8f8f8</color>
+    <color name="color_f3">#FFFFF3</color>
+    <color name="color_not_select">#77FFFFFF</color>
+    <color name="color_select">#ffFFFFFF</color>
+    <color name="color_update_btn">#E7F3FC</color>
+    <color name="color_update_btn_borter">#1F95EA</color>
+    <color name="color_audited_bg">#e2eef0</color>
+
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+
+    <color name="text_normal">#8C9EAB</color>
+    <color name="txt_color_gray2">#929292</color>
+    <color name="background">#F4F4F4</color>
+    <color name="txt_f8">#f8f8f8</color>
+    <color name="txt_green">#4ABB2C</color>
+    <color name="color_txt_gray">#F5F5F9</color>
+    <color name="color_txt_gray2">#8A9199</color>
+    <color name="color_txt_red">#FF3333</color>
+    <color name="exprot_verified_bg">#E1EDF0</color>
+    <color name="txt_color_green">#FF0EA889</color>
+    <color name="txt_color_gray">#62717B</color>
+    <color name="red_filter_txt">#f43531</color>
+    <color name="gray_btn">#F0F2F5</color>
+    <color name="receive_text">#575C61</color>
+</resources>

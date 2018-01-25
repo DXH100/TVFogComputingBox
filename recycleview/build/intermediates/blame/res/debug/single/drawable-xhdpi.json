@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "D:\\dhx\\sourceCode\\TVSample-master\\recycleview\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\no.png",
+        "source": "D:\\dhx\\sourceCode\\TVSample-master\\recycleview\\src\\main\\res\\drawable-xhdpi\\no.png"
+    },
+    {
+        "merged": "D:\\dhx\\sourceCode\\TVSample-master\\recycleview\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\top_up_data.png",
+        "source": "D:\\dhx\\sourceCode\\TVSample-master\\recycleview\\src\\main\\res\\drawable-xhdpi\\top_up_data.png"
+    },
+    {
+        "merged": "D:\\dhx\\sourceCode\\TVSample-master\\recycleview\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\img_down2.png",
+        "source": "D:\\dhx\\sourceCode\\TVSample-master\\recycleview\\src\\main\\res\\drawable-xhdpi\\img_down2.png"
+    },
+    {
+        "merged": "D:\\dhx\\sourceCode\\TVSample-master\\recycleview\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\icon_back.png",
+        "source": "D:\\dhx\\sourceCode\\TVSample-master\\recycleview\\src\\main\\res\\drawable-xhdpi\\icon_back.png"
+    },
+    {
+        "merged": "D:\\dhx\\sourceCode\\TVSample-master\\recycleview\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\record.png",
+        "source": "D:\\dhx\\sourceCode\\TVSample-master\\recycleview\\src\\main\\res\\drawable-xhdpi\\record.png"
+    },
+    {
+        "merged": "D:\\dhx\\sourceCode\\TVSample-master\\recycleview\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\icon_back_black.png",
+        "source": "D:\\dhx\\sourceCode\\TVSample-master\\recycleview\\src\\main\\res\\drawable-xhdpi\\icon_back_black.png"
+    },
+    {
+        "merged": "D:\\dhx\\sourceCode\\TVSample-master\\recycleview\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\icon_selected_receipt.png",
+        "source": "D:\\dhx\\sourceCode\\TVSample-master\\recycleview\\src\\main\\res\\drawable-xhdpi\\icon_selected_receipt.png"
+    },
+    {
+        "merged": "D:\\dhx\\sourceCode\\TVSample-master\\recycleview\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ok.png",
+        "source": "D:\\dhx\\sourceCode\\TVSample-master\\recycleview\\src\\main\\res\\drawable-xhdpi\\ok.png"
+    }
+]
