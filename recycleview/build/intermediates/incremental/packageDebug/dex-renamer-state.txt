@@ -1,4 +1,4 @@
-#Wed Jan 24 20:21:05 CST 2018
+#Fri Jan 26 11:50:37 CST 2018
 base.0=D\:\\dhx\\sourceCode\\TVSample-master\\recycleview\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
 file.0=D\:\\dhx\\sourceCode\\TVSample-master\\recycleview\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

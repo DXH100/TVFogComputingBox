@@ -23,6 +23,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.List;
+
 /**
  * Created by hejunlin on 2015/10/16.
  * blog: http://blog.csdn.net/hejjunlin
@@ -34,10 +36,7 @@ public class OptionItemAdapter extends RecyclerView.Adapter<OptionItemAdapter.Vi
 //            "最热","最受好评","TVB","内地","韩剧","美剧","鼎级剧场","港台", "偶像",
 //            "古装","家庭","神话","喜剧","战争"
 //    };
-    private String[] mDataList = new String[]{
-            "查看奖励",
-            "注册", "七天内奖励"
-    };
+    List<String> mData;
     private Context mContext;
     private int id;
     private View.OnFocusChangeListener mOnFocusChangeListener;
@@ -59,11 +58,12 @@ public class OptionItemAdapter extends RecyclerView.Adapter<OptionItemAdapter.Vi
         this.id = id;
     }
 
-    public OptionItemAdapter(Context context, int id, View.OnFocusChangeListener onFocusChangeListener) {
+    public OptionItemAdapter(Context context, int id, View.OnFocusChangeListener onFocusChangeListener, List<String> data) {
         super();
         mContext = context;
         this.id = id;
         this.mOnFocusChangeListener = onFocusChangeListener;
+        mData=data;
     }
 
     public void setOnBindListener(OnBindListener onBindListener) {
@@ -84,11 +84,11 @@ public class OptionItemAdapter extends RecyclerView.Adapter<OptionItemAdapter.Vi
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int i) {
-        if (mDataList.length == 0) {
+        if (mData.size() == 0) {
             Log.d(TAG, "mDataset has no data!");
             return;
         }
-        viewHolder.mTextView.setText(mDataList[i]);
+        viewHolder.mTextView.setText(mData.get(i));
         viewHolder.mTextView.setTag(i);
         viewHolder.itemView.setTag(i);
         viewHolder.itemView.setOnFocusChangeListener(mOnFocusChangeListener);
@@ -99,7 +99,7 @@ public class OptionItemAdapter extends RecyclerView.Adapter<OptionItemAdapter.Vi
 
     @Override
     public int getItemCount() {
-        return mDataList.length;
+        return mData.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

@@ -43,4 +43,5 @@ dependencies {
     compile 'com.google.code.gson:gson:2.2.4'
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
     compile 'com.github.lecho:hellocharts-android:v1.5.8'
+    compile 'com.blankj:utilcode:1.11.1'
 }

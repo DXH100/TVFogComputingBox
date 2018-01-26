@@ -3,6 +3,7 @@
     package="com.hejunlin.tvsample">
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -21,7 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".service.JobHandleService"/>
+
         <service android:name=".service.LocalService"/>
         <service android:name=".service.RemoteService"/>
     </application>

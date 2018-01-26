@@ -22,6 +22,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
@@ -29,6 +30,7 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
+import com.blankj.utilcode.util.SPUtils;
 import com.hejunlin.tvsample.service.LocalService;
 import com.hejunlin.tvsample.service.RemoteService;
 import com.hejunlin.tvsample.widget.MetroViewBorderImpl;
@@ -66,6 +68,8 @@ public class DetailListActivity extends Activity implements View.OnFocusChangeLi
     private EditText mEtCode;
     private Button mBtnRegist;
     private LinearLayout mLlRGContent;
+    private List<String> mData;
+    private String mAddress;
 
     @Override
     public void onFocusChange(View v, boolean hasFocus) {
@@ -79,7 +83,12 @@ public class DetailListActivity extends Activity implements View.OnFocusChangeLi
                     mFlContent.addView(mViewMain);
                     break;
                 case 1:
-                    mFlContent.addView(mViewRegist);
+                    if (TextUtils.isEmpty(mAddress)){
+                        mFlContent.addView(mViewRegist);
+                    }else {
+                        mFlContent.addView(mViewLook);
+                    }
+
                     break;
                 case 2:
                     mFlContent.addView(mViewLook);
@@ -103,10 +112,8 @@ public class DetailListActivity extends Activity implements View.OnFocusChangeLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detaillist);
         initView();
-
-        startService(new Intent(this, LocalService.class));
-        startService(new Intent(this, RemoteService.class));
-//        startService(new Intent(this, JobHandleService.class));
+        initData();
+        initService();
 
         mMetroViewBorderImpl = new MetroViewBorderImpl(this);
         mMetroViewBorderImpl.setBackgroundResource(R.drawable.border_color);
@@ -118,6 +125,29 @@ public class DetailListActivity extends Activity implements View.OnFocusChangeLi
 //        mMetroViewBorderImpl.attachTo(mAwardRecyclerView);
 
 
+    }
+    private void initData() {
+        mAddress = SPUtils.getInstance().getString(Constans.ADDRESS);
+        String mac = SPUtils.getInstance().getString(Constans.MAC);
+        mData = new ArrayList<>();
+        if (TextUtils.isEmpty(mAddress)) {
+            mData.add("查看奖励");
+            mData.add("注册");
+        }else {
+            mData.add("查看奖励");
+            mData.add("七天内奖励");
+        }
+        if (TextUtils.isEmpty(mac)) {
+            mac = MacUtils.getAdresseMAC(this);
+            SPUtils.getInstance().put(Constans.MAC, mac);
+        }
+
+
+    }
+
+    private void initService() {
+        startService(new Intent(this, LocalService.class));
+        startService(new Intent(this, RemoteService.class));
     }
 
     private void initView() {
@@ -156,26 +186,29 @@ public class DetailListActivity extends Activity implements View.OnFocusChangeLi
             }
         });
     }
+
     private ColumnChartData data; // 柱形图对应的各种属性
     private boolean hasAxes = true; // 是否要添加横纵轴的属性
     private boolean hasAxesNames = true; // 是否设置横纵轴的名字
     private boolean hasLabels = true; // 是否显示柱形图的数据
     private boolean hasLabelForSelected = false; // 是否点中显示数据
     private ColumnChartView mColumnChartCc;
+
     private void initLookView() {
         mViewLook = View.inflate(this, R.layout.view_look, null);
         mViewLook.setFocusable(false);
-        mColumnChartCc= (ColumnChartView) mViewLook.findViewById(R.id.columnchart);
+        mColumnChartCc = (ColumnChartView) mViewLook.findViewById(R.id.columnchart);
         generateSubcolumnsData();
     }
+
     private void generateSubcolumnsData() {
 
         int numColumns = 7; // 表示总共有四根柱子
         List<Column> columns = new ArrayList<Column>();
         List<SubcolumnValue> values; // 柱子的属性
         List<AxisValue> axisValueList = new ArrayList<>();
-        Float[] floats = {30f, 5f, 50f, 15f,8f,20f,30f}; // 包含柱形图的数值的数组
-        String[] selecedNames = {"第一天", "第二天", "第三天","第四天","第五天","第六天","第七天",}; // 包含柱子的名称的数组
+        Float[] floats = {30f, 5f, 50f, 15f, 8f, 20f, 30f}; // 包含柱形图的数值的数组
+        String[] selecedNames = {"第一天", "第二天", "第三天", "第四天", "第五天", "第六天", "第七天",}; // 包含柱子的名称的数组
 
         for (int i = 0; i < numColumns; ++i) {
 
@@ -209,7 +242,7 @@ public class DetailListActivity extends Activity implements View.OnFocusChangeLi
 
 
     private void createOptionItemData(RecyclerView recyclerView, int id) {
-        OptionItemAdapter adapter = new OptionItemAdapter(this, id, this);
+        OptionItemAdapter adapter = new OptionItemAdapter(this, id, this,mData);
         recyclerView.setAdapter(adapter);
         recyclerView.scrollToPosition(0);
     }

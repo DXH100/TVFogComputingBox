@@ -24,6 +24,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.telephony.TelephonyManager;
 
+import com.blankj.utilcode.util.Utils;
 import com.google.gson.Gson;
 
 import java.io.File;
@@ -49,6 +50,7 @@ public class AppManager extends Application {
         mHttpClient = new OkHttpClient();
         mGson = new Gson();
         initHttpClient(mHttpClient, mContext);
+        Utils.init(this);
     }
 
     private void initHttpClient(OkHttpClient client, Context context) {
